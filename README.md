@@ -147,7 +147,7 @@ The app supports both light and dark themes, allowing users to easily switch bet
   <img src="readme_images/dark.jpg" width="200" />
 </p>
 
-# App Structure
+## App Structure
 
 <p align="center">
   <img src="readme_images/clean_mvvm.webp" alt="Payment Flow Diagram" width="1000" />
