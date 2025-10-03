@@ -1,0 +1,28 @@
+name: gaia_nutrition_plans
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ^3.9.2
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter:
+  get:
+  get_storage:
+  http:
+  sqflite:
+  path:
+  infinite_scroll_pagination:
+  readmore:
+  flutter_stripe:
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints:
+  flutter_launcher_icons:
+flutter:
+  uses-material-design: true
+flutter_icons:
+  android: true
+  image_path: "assets/icon/gaia_logo.png"

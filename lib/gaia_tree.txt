@@ -1,0 +1,323 @@
+┣ 📂core
+┃ ┗ 📂constant
+┃   ┣ 📜app_border_radius.dart
+┃   ┣ 📜app_icon_sizes.dart
+┃   ┗ 📜app_spaces.dart
+┣ 📂features
+┃ ┣ 📂diet_plan_feature
+┃ ┃ ┣ 📂data_layer
+┃ ┃ ┃ ┣ 📂data_sources
+┃ ┃ ┃ ┃ ┣ 📂local_data_sources
+┃ ┃ ┃ ┃ ┃ ┣ 📂abstract_local_data_sources
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜diet_plan_local_data_source.dart
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜meal_ingredient_local_data_source.dart
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜meal_local_data_source.dart
+┃ ┃ ┃ ┃ ┃ ┗ 📂sqflite_data_sources
+┃ ┃ ┃ ┃ ┃   ┣ 📜diet_plan_sqflite_source.dart
+┃ ┃ ┃ ┃ ┃   ┣ 📜meal_ingredient_sqflite_source.dart
+┃ ┃ ┃ ┃ ┃   ┗ 📜meal_sqflite_source.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_data_sources
+┃ ┃ ┃ ┃   ┣ 📂abstract_remote_data_sources
+┃ ┃ ┃ ┃   ┃ ┗ 📜diet_plan_abstract_remote_data_source.dart
+┃ ┃ ┃ ┃   ┗ 📂cohere_data_sources
+┃ ┃ ┃ ┃     ┗ 📜diet_plan_cohere_data_source.dart
+┃ ┃ ┃ ┣ 📂mappers
+┃ ┃ ┃ ┃ ┣ 📂local_mappers
+┃ ┃ ┃ ┃ ┃ ┣ 📜sqflite_diet_plan_mapper.dart
+┃ ┃ ┃ ┃ ┃ ┣ 📜sqflite_meal_ingredient_mapper.dart
+┃ ┃ ┃ ┃ ┃ ┗ 📜sqflite_meal_mapper.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_mappers
+┃ ┃ ┃ ┣ 📂models
+┃ ┃ ┃ ┃ ┣ 📂local_models
+┃ ┃ ┃ ┃ ┃ ┣ 📜sqflite_diet_plan_model.dart
+┃ ┃ ┃ ┃ ┃ ┣ 📜sqflite_meal_ingredient_model.dart
+┃ ┃ ┃ ┃ ┃ ┗ 📜sqflite_meal_model.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_models
+┃ ┃ ┃ ┃   ┗ 📂cohere_models
+┃ ┃ ┃ ┃     ┣ 📜diet_plan_cohere_model.dart
+┃ ┃ ┃ ┃     ┣ 📜meal_cohere_model.dart
+┃ ┃ ┃ ┃     ┗ 📜meal_ingredient_cohere_model.dart
+┃ ┃ ┃ ┗ 📂repository_implementations
+┃ ┃ ┃   ┣ 📜diet_plan_repository_implementation.dart
+┃ ┃ ┃   ┣ 📜meal_ingredient_repository_implementation.dart
+┃ ┃ ┃   ┗ 📜meal_repository_implementation.dart
+┃ ┃ ┣ 📂domain_layer
+┃ ┃ ┃ ┣ 📂entities
+┃ ┃ ┃ ┃ ┣ 📜diet_plan_entity.dart
+┃ ┃ ┃ ┃ ┣ 📜meal_entity.dart
+┃ ┃ ┃ ┃ ┗ 📜meal_ingredient_entity.dart
+┃ ┃ ┃ ┣ 📂repositories_interfaces
+┃ ┃ ┃ ┃ ┣ 📜diet_plan_repository_interface.dart
+┃ ┃ ┃ ┃ ┣ 📜meal_ingredient_repository_interface.dart
+┃ ┃ ┃ ┃ ┗ 📜meal_repository_interfaces.dart
+┃ ┃ ┃ ┗ 📂use_cases
+┃ ┃ ┃   ┣ 📂diet_plan_use_cases
+┃ ┃ ┃   ┃ ┣ 📜create_diet_plan_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜delete_diet_plan_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_diet_plan_from_ai_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_diet_plan_meal_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_diet_plans_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_total_calories_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_total_carbohydrate_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_total_fat_use_case.dart
+┃ ┃ ┃   ┃ ┣ 📜get_total_protein_use_case.dart
+┃ ┃ ┃   ┃ ┗ 📜update_diet_plan_use_case.dart
+┃ ┃ ┃   ┣ 📂meal_ingredient_use_cases
+┃ ┃ ┃   ┃ ┣ 📜create_meal_ingredient_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜delete_meal_ingredient_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜get_meal_ingredient_calories_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜get_meal_ingredient_carbohydrate_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜get_meal_ingredient_fat_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜get_meal_ingredient_name_usecase.dart
+┃ ┃ ┃   ┃ ┣ 📜get_meal_ingredient_protein_usecase.dart
+┃ ┃ ┃   ┃ ┗ 📜update_meal_ingredient_usecase.dart
+┃ ┃ ┃   ┗ 📂meal_use_cases
+┃ ┃ ┃     ┣ 📜create_meal_usecase.dart
+┃ ┃ ┃     ┣ 📜delete_meal_usecase.dart
+┃ ┃ ┃     ┣ 📜get_meal_calories_usecase.dart
+┃ ┃ ┃     ┣ 📜get_meal_carbohydrate_usecase.dart
+┃ ┃ ┃     ┣ 📜get_meal_fat_usecase.dart
+┃ ┃ ┃     ┣ 📜get_meal_ingredients_usecase.dart
+┃ ┃ ┃     ┣ 📜get_meal_protein_usecase.dart
+┃ ┃ ┃     ┗ 📜update_meal_usecase.dart
+┃ ┃ ┗ 📂presentation_layer
+┃ ┃   ┣ 📂ai_diet_plan_generator
+┃ ┃   ┃ ┣ 📂widgets
+┃ ┃   ┃ ┃ ┣ 📜dietary_restrictions_selection_widget.dart
+┃ ┃   ┃ ┃ ┣ 📜goal_selection_widget.dart
+┃ ┃   ┃ ┃ ┣ 📜meals_count_selection_widget.dart
+┃ ┃   ┃ ┃ ┗ 📜workout_days_selection_widget.dart
+┃ ┃   ┃ ┣ 📜ai_diet_plan_generator_binding.dart
+┃ ┃   ┃ ┣ 📜ai_diet_plan_generator_controller.dart
+┃ ┃   ┃ ┗ 📜ai_diet_plan_generator_page.dart
+┃ ┃   ┣ 📂create_meal_presentation
+┃ ┃   ┃ ┣ 📂widgets
+┃ ┃   ┃ ┃ ┣ 📜add_ingredient_button.dart
+┃ ┃   ┃ ┃ ┣ 📜meal_info_section.dart
+┃ ┃   ┃ ┃ ┣ 📜nutrition_totals_card.dart
+┃ ┃   ┃ ┃ ┣ 📜selected_ingredient_item.dart
+┃ ┃   ┃ ┃ ┗ 📜selected_ingredients_section.dart
+┃ ┃   ┃ ┣ 📜create_meal_binding.dart
+┃ ┃   ┃ ┣ 📜create_meal_controller.dart
+┃ ┃   ┃ ┗ 📜create_meal_page.dart
+┃ ┃   ┣ 📂diet_plan_details_presentation
+┃ ┃   ┃ ┣ 📂widgets
+┃ ┃   ┃ ┃ ┣ 📜add_meal_button.dart
+┃ ┃   ┃ ┃ ┣ 📜diet_plan_info_card.dart
+┃ ┃   ┃ ┃ ┣ 📜meals_list.dart
+┃ ┃   ┃ ┃ ┗ 📜nutrient_item.dart
+┃ ┃   ┃ ┣ 📜diet_plan_details_binding.dart
+┃ ┃   ┃ ┣ 📜diet_plan_details_controller.dart
+┃ ┃   ┃ ┗ 📜diet_plan_details_view.dart
+┃ ┃   ┣ 📂diet_plans_presentation
+┃ ┃   ┃ ┣ 📂widgets
+┃ ┃   ┃ ┃ ┗ 📜diet_plan_list_tile_widget.dart
+┃ ┃   ┃ ┣ 📜diet_plans_binding.dart
+┃ ┃   ┃ ┣ 📜diet_plans_controller.dart
+┃ ┃   ┃ ┗ 📜diet_plans_page.dart
+┃ ┃   ┣ 📂save_diet_plan_presentation
+┃ ┃   ┃ ┣ 📂widgets
+┃ ┃   ┃ ┃ ┣ 📜diet_plan_description_field.dart
+┃ ┃   ┃ ┃ ┣ 📜diet_plan_name_field.dart
+┃ ┃   ┃ ┃ ┗ 📜save_diet_plan_actions.dart
+┃ ┃   ┃ ┣ 📜save_diet_plan_binding.dart
+┃ ┃   ┃ ┣ 📜save_diet_plan_controller.dart
+┃ ┃   ┃ ┗ 📜save_diet_plan_dialog.dart
+┃ ┃   ┗ 📂select_foods_presentation
+┃ ┃     ┣ 📂widgets
+┃ ┃     ┃ ┗ 📜food_search_item.dart
+┃ ┃     ┣ 📜select_foods_binding.dart
+┃ ┃     ┣ 📜select_foods_controller.dart
+┃ ┃     ┗ 📜select_foods_page.dart
+┃ ┣ 📂food_feature
+┃ ┃ ┣ 📂data_layer
+┃ ┃ ┃ ┣ 📂data_sources
+┃ ┃ ┃ ┃ ┣ 📂local_data_sources
+┃ ┃ ┃ ┃ ┃ ┣ 📂abstract_local_data_sources
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜food_local_data_source.dart
+┃ ┃ ┃ ┃ ┃ ┗ 📂sqflite_data_sources
+┃ ┃ ┃ ┃ ┃   ┗ 📜food_sqflite_data_source.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_data_sources
+┃ ┃ ┃ ┃   ┣ 📂abstract_remote_data_sources
+┃ ┃ ┃ ┃   ┃ ┗ 📜food_remote_data_source.dart
+┃ ┃ ┃ ┃   ┗ 📂f_d_c_data_sources
+┃ ┃ ┃ ┃     ┗ 📜f_d_c_food_data_source.dart
+┃ ┃ ┃ ┣ 📂mappers
+┃ ┃ ┃ ┃ ┣ 📂local_mappers
+┃ ┃ ┃ ┃ ┃ ┗ 📂sqflite_mappers
+┃ ┃ ┃ ┃ ┃   ┗ 📜food_sqflite_mapper.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_mappers
+┃ ┃ ┃ ┃   ┗ 📂f_d_c_mappers
+┃ ┃ ┃ ┃     ┗ 📜f_d_c_food_mapper.dart
+┃ ┃ ┃ ┣ 📂models
+┃ ┃ ┃ ┃ ┣ 📂local_models
+┃ ┃ ┃ ┃ ┃ ┗ 📂sqflite_models
+┃ ┃ ┃ ┃ ┃   ┗ 📜food_sqflite_model.dart
+┃ ┃ ┃ ┃ ┗ 📂remote_models
+┃ ┃ ┃ ┃   ┣ 📂cohere_models
+┃ ┃ ┃ ┃   ┃ ┗ 📜food_cohere_model.dart
+┃ ┃ ┃ ┃   ┗ 📂f_d_c_models
+┃ ┃ ┃ ┃     ┗ 📜f_d_c_food_model.dart
+┃ ┃ ┃ ┗ 📂repository_implementations
+┃ ┃ ┃   ┗ 📜food_repository_implementation.dart
+┃ ┃ ┣ 📂domain_layer
+┃ ┃ ┃ ┣ 📂entities
+┃ ┃ ┃ ┃ ┗ 📜food_entity.dart
+┃ ┃ ┃ ┣ 📂repositories_interfaces
+┃ ┃ ┃ ┃ ┗ 📜food_repository_interface.dart
+┃ ┃ ┃ ┗ 📂use_cases
+┃ ┃ ┃   ┣ 📜get_food_form_local_data_base_by_id_use_case.dart
+┃ ┃ ┃   ┣ 📜get_foods_use_case.dart
+┃ ┃ ┃   ┣ 📜get_saved_foods_use_case.dart
+┃ ┃ ┃   ┣ 📜is_food_saved_use_case.dart
+┃ ┃ ┃   ┣ 📜save_food_use_case.dart
+┃ ┃ ┃   ┗ 📜unsave_food_use_case.dart
+┃ ┃ ┗ 📂presentation_layer
+┃ ┃   ┗ 📂foods_list_presentation
+┃ ┃     ┣ 📂widgets
+┃ ┃     ┃ ┣ 📜food_list_tile_widget.dart
+┃ ┃     ┃ ┣ 📜food_save_button.dart
+┃ ┃     ┃ ┣ 📜foods_list_section.dart
+┃ ┃     ┃ ┣ 📜foods_search_field.dart
+┃ ┃     ┃ ┣ 📜foods_search_section.dart
+┃ ┃     ┃ ┗ 📜saved_foods_toggle_button.dart
+┃ ┃     ┣ 📜foods_list_binding.dart
+┃ ┃     ┣ 📜foods_list_controller.dart
+┃ ┃     ┗ 📜foods_list_page.dart
+┃ ┣ 📂index_page_feature
+┃ ┃ ┣ 📂widgets
+┃ ┃ ┃ ┣ 📜custom_bottom_navigation.dart
+┃ ┃ ┃ ┗ 📜index_page_view.dart
+┃ ┃ ┣ 📜index_binding.dart
+┃ ┃ ┣ 📜index_controller.dart
+┃ ┃ ┗ 📜index_page.dart
+┃ ┣ 📂root_feature
+┃ ┃ ┣ 📂data_layer
+┃ ┃ ┃ ┣ 📂data_sources
+┃ ┃ ┃ ┃ ┗ 📂local_data_sources
+┃ ┃ ┃ ┃   ┣ 📂abstract_local_data_sources
+┃ ┃ ┃ ┃   ┃ ┗ 📜theme_abstract_local_data_source.dart
+┃ ┃ ┃ ┃   ┗ 📂get_storage_data_sources
+┃ ┃ ┃ ┃     ┗ 📜theme_get_storage_data_source.dart
+┃ ┃ ┃ ┗ 📂repository_implementations
+┃ ┃ ┃   ┗ 📜theme_repository_implemntation.dart
+┃ ┃ ┣ 📂domain_layer
+┃ ┃ ┃ ┣ 📂repositories_interfaces
+┃ ┃ ┃ ┃ ┗ 📜theme_repository_interface.dart
+┃ ┃ ┃ ┗ 📂use_cases
+┃ ┃ ┃   ┗ 📂theme_use_cases
+┃ ┃ ┃     ┣ 📜get_theme_mode_use_case.dart
+┃ ┃ ┃     ┗ 📜set_theme_mode_use_case.dart
+┃ ┃ ┗ 📂presentation_layer
+┃ ┃   ┣ 📜gaia_nutrition_plans_app_controller.dart
+┃ ┃   ┗ 📜gaia_nutrition_plans_app_view.dart
+┃ ┗ 📂user_feature
+┃   ┣ 📂data_layer
+┃   ┃ ┣ 📂data_sources
+┃   ┃ ┃ ┗ 📂remote_data_sources
+┃   ┃ ┃   ┣ 📂abstract_remote_data_sources
+┃   ┃ ┃   ┃ ┗ 📜user_abstract_remote_data_source.dart
+┃   ┃ ┃   ┗ 📂supabses_data_sources
+┃   ┃ ┃     ┗ 📜user_supabase_data_source.dart
+┃   ┃ ┣ 📂mappers
+┃   ┃ ┃ ┣ 📂local_mappers
+┃   ┃ ┃ ┗ 📂remote_mappers
+┃   ┃ ┃   ┗ 📂supabase_mappers
+┃   ┃ ┃     ┗ 📜user_supabase_mapper.dart
+┃   ┃ ┣ 📂models
+┃   ┃ ┃ ┣ 📂local_models
+┃   ┃ ┃ ┗ 📂remote_models
+┃   ┃ ┃   ┗ 📂supabase_models
+┃   ┃ ┃     ┗ 📜user_supabase_model.dart
+┃   ┃ ┗ 📂repository_implementations
+┃   ┃   ┗ 📜user_repository_implementation.dart
+┃   ┣ 📂domain_layer
+┃   ┃ ┣ 📂entities
+┃   ┃ ┃ ┗ 📜user_entity.dart
+┃   ┃ ┣ 📂repositories_interfaces
+┃   ┃ ┃ ┗ 📜user_repository_interface.dart
+┃   ┃ ┗ 📂use_cases
+┃   ┃   ┣ 📜delete_account_use_case.dart
+┃   ┃   ┣ 📜get_client_secret_use_case.dart
+┃   ┃   ┣ 📜get_current_user_id_use_case.dart
+┃   ┃   ┣ 📜get_current_user_profile_use_case.dart
+┃   ┃   ┣ 📜get_user_by_id_use_case.dart
+┃   ┃   ┣ 📜is_user_logged_in_use_case.dart
+┃   ┃   ┣ 📜is_user_subscribed_use_case.dart
+┃   ┃   ┣ 📜login_use_case.dart
+┃   ┃   ┣ 📜logout_use_case.dart
+┃   ┃   ┣ 📜register_use_case.dart
+┃   ┃   ┣ 📜reset_password_use_case.dart
+┃   ┃   ┗ 📜update_profile_use_case.dart
+┃   ┗ 📂presentation_layer
+┃     ┣ 📂auth_gate_presentation
+┃     ┃ ┣ 📜auth_gate_binding.dart
+┃     ┃ ┣ 📜auth_gate_controller.dart
+┃     ┃ ┗ 📜auth_gate_page.dart
+┃     ┣ 📂edit_profile_presentation
+┃     ┃ ┣ 📂widgets
+┃     ┃ ┃ ┣ 📜edit_gender_birthday_widget.dart
+┃     ┃ ┃ ┣ 📜edit_name_input_widget.dart
+┃     ┃ ┃ ┣ 📜edit_profile_error_widget.dart
+┃     ┃ ┃ ┣ 📜edit_profile_loading_widget.dart
+┃     ┃ ┃ ┗ 📜edit_weight_height_input_widget.dart
+┃     ┃ ┣ 📜edit_profile_binding.dart
+┃     ┃ ┣ 📜edit_profile_controller.dart
+┃     ┃ ┗ 📜edit_profile_page.dart
+┃     ┣ 📂login_presentation
+┃     ┃ ┣ 📂widgets
+┃     ┃ ┃ ┣ 📜create_account_button_widget.dart
+┃     ┃ ┃ ┣ 📜email_input_widget.dart
+┃     ┃ ┃ ┣ 📜login_button_widget.dart
+┃     ┃ ┃ ┣ 📜login_error_message.dart
+┃     ┃ ┃ ┗ 📜password_input_widget.dart
+┃     ┃ ┣ 📜login_binding.dart
+┃     ┃ ┣ 📜login_controller.dart
+┃     ┃ ┗ 📜login_page.dart
+┃     ┣ 📂profile_presentation
+┃     ┃ ┣ 📂widgets
+┃     ┃ ┃ ┣ 📜edit_profile_button_widget.dart
+┃     ┃ ┃ ┣ 📜profile_error_widget.dart
+┃     ┃ ┃ ┣ 📜profile_info_widget.dart
+┃     ┃ ┃ ┣ 📜profile_loading_widget.dart
+┃     ┃ ┃ ┗ 📜profile_menu_item_widget.dart
+┃     ┃ ┣ 📜profile_binding.dart
+┃     ┃ ┣ 📜profile_controller.dart
+┃     ┃ ┗ 📜profile_page.dart
+┃     ┗ 📂register_presentation
+┃       ┣ 📂widgets
+┃       ┃ ┣ 📜birthday_picker_widget.dart
+┃       ┃ ┣ 📜first_name_input_widget.dart
+┃       ┃ ┣ 📜gender_selector_widget.dart
+┃       ┃ ┣ 📜register_button_widget.dart
+┃       ┃ ┣ 📜register_email_input_widget.dart
+┃       ┃ ┣ 📜register_erorr_widget.dart
+┃       ┃ ┣ 📜register_password_input_widget.dart
+┃       ┃ ┣ 📜second_name_input_widget.dart
+┃       ┃ ┗ 📜weight_height_input_widget.dart
+┃       ┣ 📜register_binding.dart
+┃       ┣ 📜register_controller.dart
+┃       ┗ 📜register_page.dart
+┣ 📂services_providers
+┃ ┣ 📜diet_plan_services_provider.dart
+┃ ┣ 📜food_services_provider.dart
+┃ ┣ 📜get_storage_services_provider.dart
+┃ ┣ 📜http_client_services_provider.dart
+┃ ┣ 📜root_services_provider.dart
+┃ ┣ 📜sqflite_services_provider.dart
+┃ ┣ 📜supabase_services_provider.dart
+┃ ┗ 📜user_services_provider.dart
+┣ 📂set_up_files
+┃ ┣ 📜app_set_up.dart
+┃ ┣ 📜diet_plan_services_set_up.dart
+┃ ┣ 📜food_services_set_up.dart
+┃ ┣ 📜get_storage_set_up.dart
+┃ ┣ 📜http_client_set_up.dart
+┃ ┣ 📜root_set_up.dart
+┃ ┣ 📜sqflite_set_up.dart
+┃ ┣ 📜supabase_set_up.dart
+┃ ┗ 📜user_services_set_up.dart
+┣ 📂shared_widgets
+┃ ┣ 📜confirm_deletion_dialog.dart
+┃ ┗ 📜food_nutrition_info.dart
+┗ 📜main.dart
