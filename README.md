@@ -32,14 +32,12 @@ Unopinionated, extensible and highly customizable package to help you lazily loa
 ## Features
 ### Sign in / Sign up
 Allows users to securely create a new account or log in to an existing one. Supports authentication via email/password and integrates with Supabase for secure user management and session handling.
-
 <p float="left">
   <img src="readme_images/Screenshot_20251003_155814_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Log in page" width="250" />
   <img src="readme_images/Screenshot_20251003_155930_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Create account page" width="250" />
   
 ### Payment / Subscription Activation
 Enables users to securely pay for and activate their subscription within the app. Integrates with **Stripe** to provide a seamless payment experience, supporting multiple payment methods. The feature ensures secure handling of payment data and updates the user’s subscription status instantly upon successful payment.
-
 <p float="left">
   <img src="readme_images/Screenshot_20251003_161739_com_example_gaia_nutrition_plans_PaymentSheetActivity.jpg" alt="Payment step 1" width="250" />
   <img src="readme_images/Screenshot_20251003_161807_com_example_gaia_nutrition_plans_PaymentSheetActivity.jpg" alt="Payment step 2" width="250" />
@@ -63,7 +61,6 @@ The app provides a secure and seamless payment process for activating user subsc
 
 4. **Activate Subscription**  
    The webhook-invoked function updates the user's subscription status in the database, activating the subscription immediately.
-
 <p align="center">
   <img src="readme_images/Screenshot_20251001_163740.jpg" alt="Payment Flow Diagram" width="600" />
 </p>
@@ -76,8 +73,6 @@ The app fetches detailed food information from the USDA FoodData Central (FDC) A
 2. The Edge Function securely uses the API key to fetch the data and returns the results to the app.  
 3. The app parses the returned data and saves it into the local SQLite database using SQFlite.  
 4. The locally stored data is then used for meal planning, search, and other app features without requiring repeated network calls.  
-
-
 <p float="left">
   <img src="readme_images/Screenshot_20251003_170455_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food list screen" width="250" />
   <img src="readme_images/Screenshot_20251003_170502_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food details screen" width="250" />
