@@ -66,7 +66,6 @@ The app provides a secure and seamless payment process for activating user subsc
 4. **Activate Subscription**  
    The webhook-invoked function updates the user's subscription status in the database, activating the subscription immediately.
 
-**Screenshots:**    
 <p align="center">
   <img src="readme_images/Screenshot_20251001_163740.jpg" alt="Payment Flow Diagram" width="600" />
 </p>
