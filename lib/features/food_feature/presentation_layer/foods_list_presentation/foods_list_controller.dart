@@ -89,8 +89,9 @@ class FoodsListController extends GetxController {
 
   Future<void> saveFood(FoodEntity food) async {
     try {
+      savedFoodsId.add(food.id!);
+      update();
       await saveFoodUseCase.execute(food);
-      pagingController.refresh();
     } catch (e) {
       Get.snackbar('Error', 'Failed to save food');
     }
@@ -98,6 +99,8 @@ class FoodsListController extends GetxController {
 
   Future<void> unsaveFood(FoodEntity food) async {
     try {
+      savedFoodsId.remove(food.id!);
+      update();
       await unsaveFoodUseCase.execute(food);
       pagingController.refresh();
     } catch (e) {

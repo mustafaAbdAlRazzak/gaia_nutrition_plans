@@ -21,8 +21,11 @@ class FoodSqfliteDataSource implements FoodLocalDataSources {
       whereArgs: [food.name],
     );
     if (existing.isEmpty) {
-      // إذا لم يكن موجوداً، قم بالحفظ
-      return await database.insert(tableName, model.toMap());
+      final map = model.toMap();
+      if (food.id != null) {
+        map['id'] = food.id;
+      }
+      return await database.insert(tableName, map);
     }
     return existing.first['id'] as int;
   }

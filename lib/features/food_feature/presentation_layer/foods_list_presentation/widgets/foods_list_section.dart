@@ -5,20 +5,25 @@ import 'package:gaia_nutrition_plans/features/food_feature/presentation_layer/fo
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
-class FoodsListSection extends GetView<FoodsListController> {
+class FoodsListSection extends StatelessWidget {
   const FoodsListSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return PagingListener(
-      controller: controller.pagingController,
-      builder: (context, state, fetchNextPage) => PagedListView(
-        state: state,
-        fetchNextPage: () => fetchNextPage(),
-        builderDelegate: PagedChildBuilderDelegate<FoodEntity>(
-          itemBuilder: (context, item, index) => FoodListTileWidget(food: item),
-        ),
-      ),
+    return GetBuilder<FoodsListController>(
+      builder: (controller) {
+        return PagingListener(
+          controller: controller.pagingController,
+          builder: (context, state, fetchNextPage) => PagedListView(
+            state: state,
+            fetchNextPage: () => fetchNextPage(),
+            builderDelegate: PagedChildBuilderDelegate<FoodEntity>(
+              itemBuilder: (context, item, index) =>
+                  FoodListTileWidget(food: item),
+            ),
+          ),
+        );
+      },
     );
   }
 }

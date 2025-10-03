@@ -21,38 +21,50 @@ class RegisterPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Create Account'), centerTitle: true),
       body: GetBuilder<RegisterController>(
         builder: (controller) {
-          return Form(
-            key: controller.formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                if (controller.errorMessage != null)
-                  const RegisterErorrWidget(),
-                const FirstNameInputWidget(),
-                const SizedBox(height: mediumSpace),
-                const SecondNameInputWidget(),
-                const SizedBox(height: mediumSpace),
-                const RegisterEmailInputWidget(),
-                const SizedBox(height: mediumSpace),
-                const BirthdayPickerWidget(),
-                const SizedBox(height: mediumSpace),
-                const GenderSelectorWidget(),
-                const SizedBox(height: mediumSpace),
-                const WeightHeightInputWidget(),
-                const SizedBox(height: mediumSpace),
-                const RegisterPasswordInputWidget(
-                  labelText: 'Password',
-                  hintText: 'Enter your password',
-                ),
-                const SizedBox(height: mediumSpace),
-                const RegisterPasswordInputWidget(
-                  labelText: 'Confirm Password',
-                  hintText: 'Confirm your password',
-                ),
-                const SizedBox(height: largeSpace),
-                const RegisterButtonWidget(),
-                const SizedBox(height: largeSpace),
-              ],
+          return SingleChildScrollView(
+            padding: const EdgeInsets.all(smallSpace),
+            child: Form(
+              key: controller.formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  if (controller.errorMessage != null)
+                    const RegisterErorrWidget(),
+                  const FirstNameInputWidget(),
+                  const SizedBox(height: mediumSpace),
+                  const SecondNameInputWidget(),
+                  const SizedBox(height: mediumSpace),
+                  const RegisterEmailInputWidget(),
+                  const SizedBox(height: mediumSpace),
+                  const BirthdayPickerWidget(),
+                  const SizedBox(height: mediumSpace),
+                  const GenderSelectorWidget(),
+                  const SizedBox(height: mediumSpace),
+                  const WeightHeightInputWidget(),
+                  const SizedBox(height: mediumSpace),
+                  RegisterPasswordInputWidget(
+                    labelText: 'Password',
+                    hintText: 'Enter your password',
+                    controller: controller.passwordController,
+                    isVisible: controller.isPasswordVisible,
+                    toggleVisibility: controller.togglePasswordVisibility,
+                    clearError: controller.clearError,
+                  ),
+                  const SizedBox(height: mediumSpace),
+                  RegisterPasswordInputWidget(
+                    labelText: 'Confirm Password',
+                    hintText: 'Confirm your password',
+                    controller: controller.confirmPasswordController,
+                    isVisible: controller.isConfirmPasswordVisible,
+                    toggleVisibility:
+                        controller.toggleConfirmPasswordVisibility,
+                    clearError: controller.clearError,
+                  ),
+                  const SizedBox(height: largeSpace),
+                  const RegisterButtonWidget(),
+                  const SizedBox(height: largeSpace),
+                ],
+              ),
             ),
           );
         },

@@ -12,22 +12,23 @@ class SelectFoodsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SelectFoodsController>(
-      builder: (controller) => Card(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Select Foods'),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: controller.onCancel,
-            ),
-            actions: [
-              IconButton(
-                icon: const Icon(Icons.check),
-                onPressed: controller.onAddSelectedFoods,
-              ),
-            ],
+      builder: (controller) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Select Foods'),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: controller.onCancel,
           ),
-          body: Column(
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.check),
+              onPressed: controller.onAddSelectedFoods,
+            ),
+          ],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(smallSpace),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: mediumSpace),

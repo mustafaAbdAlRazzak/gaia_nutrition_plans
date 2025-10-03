@@ -50,13 +50,6 @@ class LoginController extends GetxController {
         password: passwordController.text,
       );
       Get.off(() => const IndexPage(), binding: IndexBinding());
-      Get.snackbar(
-        'Success',
-        'Login successful!',
-        snackPosition: SnackPosition.TOP,
-        backgroundColor: Colors.green,
-        colorText: Colors.white,
-      );
     } catch (e) {
       _errorMessage = 'Login failed. Please try again.';
     } finally {

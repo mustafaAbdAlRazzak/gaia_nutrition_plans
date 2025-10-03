@@ -1,34 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:gaia_nutrition_plans/features/user_feature/presentation_layer/register_presentation/register_controller.dart';
-import 'package:get/state_manager.dart';
 
-class RegisterPasswordInputWidget extends GetView<RegisterController> {
+class RegisterPasswordInputWidget extends StatelessWidget {
   final String labelText;
   final String hintText;
+  final TextEditingController controller;
+  final void Function() toggleVisibility;
+  final Function clearError;
+  final bool isVisible;
 
   const RegisterPasswordInputWidget({
     super.key,
     this.labelText = 'Password',
     this.hintText = 'Enter your password',
+    required this.controller,
+    required this.toggleVisibility,
+    required this.clearError,
+    this.isVisible = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: controller.passwordController,
-      obscureText: !controller.isPasswordVisible,
+      controller: controller,
+      obscureText: !isVisible,
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,
         prefixIcon: const Icon(Icons.lock_outline, size: 24),
         suffixIcon: IconButton(
           icon: Icon(
-            controller.isPasswordVisible
-                ? Icons.visibility_off
-                : Icons.visibility,
+            isVisible ? Icons.visibility_off : Icons.visibility,
             size: 24,
           ),
-          onPressed: controller.togglePasswordVisibility,
+          onPressed: toggleVisibility,
         ),
       ),
       validator: (value) {
@@ -43,7 +47,7 @@ class RegisterPasswordInputWidget extends GetView<RegisterController> {
         }
         return null;
       },
-      onChanged: (value) => controller.clearError(),
+      onChanged: (value) => clearError(),
     );
   }
 }
