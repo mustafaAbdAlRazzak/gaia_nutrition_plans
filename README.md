@@ -123,7 +123,7 @@ This feature allows users to automatically generate complete diet plans using ar
 
 **Screenshots:**  
 
-<p align="center">
+<p float="left">
   <img src="readme_images/ai1.jpg" width="200" />
   <img src="readme_images/ai2.jpg" width="200" />
   <img src="readme_images/ai3.jpg" width="200" />
