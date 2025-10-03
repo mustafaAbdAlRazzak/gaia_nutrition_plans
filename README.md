@@ -1,6 +1,6 @@
 # Gaia nutrition plans
 <p align="center">
-  <img src="readme_images/gaia logo.jpg" alt="main logo" width="600" />
+  <img src="readme_images/gaia logo.jpg" alt="main logo" width="1000" />
 </p>
 
 ## Overview
