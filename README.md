@@ -150,7 +150,7 @@ The app supports both light and dark themes, allowing users to easily switch bet
 # App Structure
 
 <p align="center">
-  <img src="readme_images/clean_mvvm.webp" alt="Payment Flow Diagram" width="600" />
+  <img src="readme_images/clean_mvvm.webp" alt="Payment Flow Diagram" width="1000" />
 </p>
 
 The application is organized using a **Feature-Based Clean Architecture** combined with **MVVM (Model-View-ViewModel)** pattern. This ensures **separation of concerns, maintainability, and testability**:
