@@ -77,3 +77,42 @@ The app fetches detailed food information from the USDA FoodData Central (FDC) A
   <img src="readme_images/Screenshot_20251003_170455_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food list screen" width="250" />
   <img src="readme_images/Screenshot_20251003_170502_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food details screen" width="250" />
 </p>
+
+### Meal Plan Creation
+
+The app allows users to easily create and customize their own dietary meal plans.
+
+#### Steps to Create a New Meal Plan:
+1. Navigate to the **Meal Plans** page.  
+2. Tap the **Add** button.  
+3. Fill in the required fields (plan name, description, etc.).  
+4. Save the plan.  
+
+<p float="left">
+  <img src="readme_images/add_plan1.jpg" alt="Add Plan Step 1" width="200" />
+  <img src="readme_images/add_plan2.jpg" alt="Add Plan Step 2" width="200" />
+  <img src="readme_images/add_plan3.jpg" alt="Add Plan Step 3" width="200" />
+</p>
+
+---
+
+### Adding a New Meal to a Plan
+
+Once a plan is created, users can add meals to it with flexible customization.
+
+#### Steps to Add a Meal:
+1. Open the **Meal Plan Details** page.  
+2. Tap **Add New Meal**.  
+3. Fill in the meal-specific fields (e.g., name, type).  
+4. Add ingredients to the meal via the **Ingredient Selection** page.  
+5. Enter the weight/amount for each ingredient.  
+6. Save the meal and add it to the plan.  
+
+<p float="left">
+  <img src="readme_images/add_meal1.jpg" alt="Add Meal Step 1" width="200" />
+  <img src="readme_images/add_meal2.jpg" alt="Add Meal Step 2" width="200" />
+  <img src="readme_images/add_meal3.jpg" alt="Add Meal Step 3" width="200" />
+  <img src="readme_images/add_meal4.jpg" alt="Add Meal Step 4" width="200" />
+  <img src="readme_images/add_meal5.jpg" alt="Add Meal Step 5" width="200" />
+</p>
+
