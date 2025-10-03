@@ -148,8 +148,8 @@ The app supports both light and dark themes, allowing users to easily switch bet
 </p>
 
 ## Contact / Author
-**Name:** Mostafa Abdel Razzak 
-**Email:** [mustafaabdalrazzak2002101@gmail.com](mailto:mustafaabdalrazzak2002101@gmail.com)  
+**Name:** Mostafa Abdel Razzak   
 **Phone:** +964 777 359 1496  
+**Email:** [mustafaabdalrazzak2002101@gmail.com](mailto:mustafaabdalrazzak2002101@gmail.com)
 
 You can reach out for any questions, collaborations, or feedback regarding this project.
