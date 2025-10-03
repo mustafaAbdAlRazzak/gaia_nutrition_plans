@@ -36,5 +36,15 @@ Allows users to securely create a new account or log in to an existing one. Supp
 <p float="left">
   <img src="readme_images/Screenshot_20251003_155814_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Log in page" width="250" />
   <img src="readme_images/Screenshot_20251003_155930_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Create account page" width="250" />
+  
+### Payment / Subscription Activation
+Enables users to securely pay for and activate their subscription within the app. Integrates with **Stripe** to provide a seamless payment experience, supporting multiple payment methods. The feature ensures secure handling of payment data and updates the user’s subscription status instantly upon successful payment.
+
+<p float="left">
+  <img src="readme_images/Screenshot_20251003_161739_com_example_gaia_nutrition_plans_PaymentSheetActivity.jpg" alt="Payment step 1" width="250" />
+  <img src="readme_images/Screenshot_20251003_161807_com_example_gaia_nutrition_plans_PaymentSheetActivity.jpg" alt="Payment step 2" width="250" />
+  <img src="readme_images/Screenshot_20251003_161811_com_example_gaia_nutrition_plans_PaymentSheetActivity.jpg" alt="Payment step 3" width="250" />
+</p>
+  
 </p>
 
