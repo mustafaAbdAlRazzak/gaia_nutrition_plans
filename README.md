@@ -68,4 +68,16 @@ The app provides a secure and seamless payment process for activating user subsc
   <img src="readme_images/Screenshot_20251001_163740.jpg" alt="Payment Flow Diagram" width="600" />
 </p>
 
+### Food Data Retrieval & Local Storage
+The app fetches detailed food information from the USDA FoodData Central (FDC) API via a Supabase Edge Function. This ensures the API key is securely stored on the server and never exposed in the client app. The retrieved food data is then saved locally using SQFlite, allowing users to access nutritional information offline and enabling fast, responsive meal plan generation.  
 
+**Flow:**  
+1. The app calls a Supabase Edge Function to request food items and their nutritional information from the USDA FDC API.  
+2. The Edge Function securely uses the API key to fetch the data and returns the results to the app.  
+3. The app parses the returned data and saves it into the local SQLite database using SQFlite.  
+4. The locally stored data is then used for meal planning, search, and other app features without requiring repeated network calls.  
+
+<p float="left">
+  <img src="readme_images/Screenshot_20251003_170455_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food list screen" width="250" />
+  <img src="readme_images/Screenshot_20251003_170502_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food details screen" width="250" />
+</p>
