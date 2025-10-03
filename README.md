@@ -48,3 +48,24 @@ Enables users to securely pay for and activate their subscription within the app
   
 </p>
 
+**Payment / Subscription Activation Flow**
+
+The app provides a secure and seamless payment process for activating user subscriptions. The flow is as follows:
+
+1. **Initiate Payment Intent**  
+   The user selects the desired product. The app calls a Supabase Edge Function to create a payment intent, securely storing the secret key. The function returns the necessary payment details to the app.
+
+2. **Confirm Payment**  
+   After receiving the payment details, the user confirms the transaction within the app.
+
+3. **Stripe Webhook Notification**  
+   Stripe notifies the system via a webhook once the payment is successfully completed.
+
+4. **Activate Subscription**  
+   The webhook-invoked function updates the user's subscription status in the database, activating the subscription immediately.
+
+<p align="center">
+  <img src="readme_images/Screenshot_20251001_163740.jpg" alt="Payment Flow Diagram" width="600" />
+</p>
+
+
