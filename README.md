@@ -32,5 +32,9 @@ Unopinionated, extensible and highly customizable package to help you lazily loa
 ## Features
 ### Sign in / Sign up
 Allows users to securely create a new account or log in to an existing one. Supports authentication via email/password and integrates with Supabase for secure user management and session handling.
-![Log in page](readme_images/Screenshot_20251003_155814_com_example_gaia_nutrition_plans_MainActivity.jpg)
-![create_account_oage](readme_images/Screenshot_20251003_155930_com_example_gaia_nutrition_plans_MainActivity.jpg)
+
+<p float="left">
+  <img src="readme_images/Screenshot_20251003_155814_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Log in page" width="250" />
+  <img src="readme_images/Screenshot_20251003_155930_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Create account page" width="250" />
+</p>
+
