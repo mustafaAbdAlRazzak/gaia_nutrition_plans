@@ -146,3 +146,10 @@ The app supports both light and dark themes, allowing users to easily switch bet
   <img src="readme_images/light.jpg" width="200" />
   <img src="readme_images/dark.jpg" width="200" />
 </p>
+
+## Contact / Author
+**Name:** Mostafa Abdel Razzak 
+**Email:** [mustafaabdalrazzak2002101@gmail.com](mailto:mustafaabdalrazzak2002101@gmail.com)  
+**Phone:** +964 777 359 1496  
+
+You can reach out for any questions, collaborations, or feedback regarding this project.
