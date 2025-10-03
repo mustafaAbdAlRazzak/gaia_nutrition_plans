@@ -44,6 +44,7 @@ Enables users to securely pay for and activate their subscription within the app
 </p>
   
 </p>
+
 **Payment / Subscription Activation Flow**
 The app provides a secure and seamless payment process for activating user subscriptions. The flow is as follows:
 
@@ -61,6 +62,7 @@ The app provides a secure and seamless payment process for activating user subsc
 <p align="center">
   <img src="readme_images/Screenshot_20251001_163740.jpg" alt="Payment Flow Diagram" width="600" />
 </p>
+
 ### Food Data Retrieval & Local Storage
 The app fetches detailed food information from the USDA FoodData Central (FDC) API via a Supabase Edge Function. This ensures the API key is securely stored on the server and never exposed in the client app. The retrieved food data is then saved locally using SQFlite, allowing users to access nutritional information offline and enabling fast, responsive meal plan generation.  
 
@@ -73,6 +75,7 @@ The app fetches detailed food information from the USDA FoodData Central (FDC) A
   <img src="readme_images/Screenshot_20251003_170455_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food list screen" width="250" />
   <img src="readme_images/Screenshot_20251003_170502_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food details screen" width="250" />
 </p>
+
 ### Meal Plan Creation
 The app allows users to easily create and customize their own dietary meal plans.
 
@@ -87,6 +90,7 @@ The app allows users to easily create and customize their own dietary meal plans
   <img src="readme_images/add_plan2.jpg" alt="Add Plan Step 2" width="200" />
   <img src="readme_images/add_plan3.jpg" alt="Add Plan Step 3" width="200" />
 </p>
+
 ### Adding a New Meal to a Plan
 Once a plan is created, users can add meals to it with flexible customization.
 
@@ -105,6 +109,7 @@ Once a plan is created, users can add meals to it with flexible customization.
   <img src="readme_images/add_meal4.jpg" alt="Add Meal Step 4" width="200" />
   <img src="readme_images/add_meal5.jpg" alt="Add Meal Step 5" width="200" />
 </p>
+
 ### Create Meal Plans with AI  
 This feature allows users to automatically generate complete diet plans using artificial intelligence.  
 
@@ -122,4 +127,3 @@ This feature allows users to automatically generate complete diet plans using ar
   <img src="readme_images/ai2.jpg" width="200" />
   <img src="readme_images/ai3.jpg" width="200" />
 </p>
-
