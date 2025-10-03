@@ -132,3 +132,11 @@ This feature allows users to automatically generate complete diet plans using ar
   <img src="readme_images/ai2.jpg" width="200" />
   <img src="readme_images/ai3.jpg" width="200" />
 </p>
+
+### Light / Dark Theme Switching  
+The app supports both light and dark themes, allowing users to easily switch between them for a comfortable viewing experience in any environment.  
+
+<p align="center">
+  <img src="readme_images/light.jpg" width="200" />
+  <img src="readme_images/dark.jpg" width="200" />
+</p>
