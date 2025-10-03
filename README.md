@@ -147,6 +147,36 @@ The app supports both light and dark themes, allowing users to easily switch bet
   <img src="readme_images/dark.jpg" width="200" />
 </p>
 
+# App Structure
+
+<p align="center">
+  <img src="readme_images/clean_mvvm.webp" alt="Payment Flow Diagram" width="600" />
+</p>
+
+The application is organized using a **Feature-Based Clean Architecture** combined with **MVVM (Model-View-ViewModel)** pattern. This ensures **separation of concerns, maintainability, and testability**:
+
+- **core/constants:**  
+  Contains app-wide definitions such as borders, sizes, and spacing.
+- **features:**  
+  Each feature (e.g., Diet Plan, Meals, Foods, User, Index Page) follows **Clean Architecture layers** and MVVM principles:  
+  1. **Data Layer (Model):** Handles data from local sources (SQLite / GetStorage) or external APIs (Cohere AI / Supabase).  
+  2. **Domain Layer:** Defines entities, repository interfaces, and use cases. This layer contains the **business logic**.  
+  3. **Presentation Layer (View + ViewModel):**  
+     - **View:** Pages and Widgets responsible for UI.  
+     - **ViewModel / Controller:** Handles the state, interacts with use cases from the domain layer, and updates the UI accordingly.  
+- **services_providers:**  
+  Manages **dependency injection**, connecting repositories, services, and use cases to the ViewModels.
+- **set_up_files:**  
+  Initializes app configuration and services on startup.
+- **shared_widgets:**  
+  Reusable widgets used across multiple features, like dialogs or nutrition info cards.
+- **main.dart:**  
+  Entry point of the application, launching the app and initializing dependencies.
+
+This combination of **Clean Architecture** and **MVVM** provides a **clear separation between UI, business logic, and data**, making the app highly maintainable, testable, and scalable while allowing easy addition of new features.
+
+
+
 ## Contact / Author
 **Name:** Mostafa Abdel Razzak   
 **Phone:** +964 777 359 1496  
