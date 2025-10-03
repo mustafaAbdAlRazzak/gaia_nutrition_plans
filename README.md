@@ -77,6 +77,7 @@ The app fetches detailed food information from the USDA FoodData Central (FDC) A
 3. The app parses the returned data and saves it into the local SQLite database using SQFlite.  
 4. The locally stored data is then used for meal planning, search, and other app features without requiring repeated network calls.  
 
+
 <p float="left">
   <img src="readme_images/Screenshot_20251003_170455_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food list screen" width="250" />
   <img src="readme_images/Screenshot_20251003_170502_com_example_gaia_nutrition_plans_MainActivity.jpg" alt="Food details screen" width="250" />
