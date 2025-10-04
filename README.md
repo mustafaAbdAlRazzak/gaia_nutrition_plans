@@ -184,9 +184,13 @@ The application is organized using a **Feature-Based Clean Architecture** combin
 
 This combination of **Clean Architecture** and **MVVM** provides a **clear separation between UI, business logic, and data**, making the app highly maintainable, testable, and scalable while allowing easy addition of new features.
 
-## Supabase Edge Functions
+## Supabase 
+### Database
+A single table, **profiles**[sql1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/profiles_table.sql), stores user profile information linked to Supabase Auth. It includes fields such as **first_name**, **second_name**, **birthday**, **weight**, **height**, **gender**, and **subscription_expiry**.
+### Trigger
+A trigger function **handle_new_user()**[sql2](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/handle_new_user.sql) automatically creates a new profile in the profiles table whenever a user signs up. This ensures that every authenticated user has a corresponding profile in the database.
+### Edge Functions
 Edge Functions are server-side Typescript functions, distributed globally at the edge — close to your users. They can be used for listening to webhooks or integrating your Supabase project with third-parties.
-
 - **get foods** : [ef1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/get_foods.ts)
 - **delete account** : [ef2](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/delete_account.ts)
 - **create payment intent** : [ef3](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/create_payment_intent.ts)
