@@ -121,9 +121,18 @@ Once a plan is created, users can add meals to it with flexible customization.
   <img src="readme_images/add_meal5.jpg" alt="Add Meal Step 5" width="200" />
 </p>
 
-### Create Meal Plans with AI  
-This feature allows users to automatically generate complete diet plans using artificial intelligence.  
+### Create Meal Plans with AI
+When a user requests to generate a meal plan, the process runs through a **Supabase Function** that:
 
+1. First checks if the user has an **active subscription** to the service.  
+2. If the subscription is valid, the function securely uses the **AI model key** on the server side.  
+3. The AI generates the full meal plan, and the result is returned to the user.  
+
+**Why this design?**
+- The **AI model key** is protected and never exposed to the client.  
+- **Abuse prevention**, since only authorized users can trigger the generation.  
+- The feature is **exclusive to paying subscribers**.  
+  
 **Steps:**  
 1. Click the “Add AI-generated Plan” button.  
 2. Select the options that form the prompt.  
