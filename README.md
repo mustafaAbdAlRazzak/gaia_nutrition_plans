@@ -186,9 +186,9 @@ This combination of **Clean Architecture** and **MVVM** provides a **clear separ
 
 ## Supabase 
 ### Database
-A single table, **profiles**[sql1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/profiles_table.sql), stores user profile information linked to Supabase Auth. It includes fields such as **first_name**, **second_name**, **birthday**, **weight**, **height**, **gender**, and **subscription_expiry**.
+A single table, **profiles** [sql1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/profiles_table.sql), stores user profile information linked to Supabase Auth. It includes fields such as **first_name**, **second_name**, **birthday**, **weight**, **height**, **gender**, and **subscription_expiry**.
 ### Trigger
-A trigger function **handle_new_user()**[sql2](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/handle_new_user.sql) automatically creates a new profile in the profiles table whenever a user signs up. This ensures that every authenticated user has a corresponding profile in the database.
+A trigger function **handle_new_user()** [sql2](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/handle_new_user.sql) automatically creates a new profile in the profiles table whenever a user signs up. This ensures that every authenticated user has a corresponding profile in the database.
 ### Edge Functions
 Edge Functions are server-side Typescript functions, distributed globally at the edge — close to your users. They can be used for listening to webhooks or integrating your Supabase project with third-parties.
 - **get foods** : [ef1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/get_foods.ts)
