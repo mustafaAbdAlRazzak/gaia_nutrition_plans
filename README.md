@@ -184,7 +184,8 @@ The application is organized using a **Feature-Based Clean Architecture** combin
 
 This combination of **Clean Architecture** and **MVVM** provides a **clear separation between UI, business logic, and data**, making the app highly maintainable, testable, and scalable while allowing easy addition of new features.
 
-
+## Supabase Edge Functions
+Edge Functions are server-side Typescript functions, distributed globally at the edge — close to your users. They can be used for listening to webhooks or integrating your Supabase project with third-parties.
 
 ## Contact / Author
 **Name:** Mostafa Abdel Razzak     
