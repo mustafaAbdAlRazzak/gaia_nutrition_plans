@@ -185,6 +185,7 @@ The application is organized using a **Feature-Based Clean Architecture** combin
 This combination of **Clean Architecture** and **MVVM** provides a **clear separation between UI, business logic, and data**, making the app highly maintainable, testable, and scalable while allowing easy addition of new features.
 
 ## Supabase 
+Supabase is an open-source platform providing backend-as-a-service (BaaS) tools built on a PostgreSQL database. It offers a managed Postgres database, user authentication, file storage, serverless edge functions, and real-time data capabilities, all designed to simplify web and mobile app development. Think of it as a set of "backend-as-a-service" components that developers can use to build applications without managing the underlying infrastructure. 
 ### Database
 A single table, **profiles** [sql1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/sql_codes/profiles_table.sql), stores user profile information linked to Supabase Auth. It includes fields such as **first_name**, **second_name**, **birthday**, **weight**, **height**, **gender**, and **subscription_expiry**.
 ### Trigger
