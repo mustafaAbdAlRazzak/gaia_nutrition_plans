@@ -187,6 +187,12 @@ This combination of **Clean Architecture** and **MVVM** provides a **clear separ
 ## Supabase Edge Functions
 Edge Functions are server-side Typescript functions, distributed globally at the edge — close to your users. They can be used for listening to webhooks or integrating your Supabase project with third-parties.
 
+**get foods** : [ef1](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/get_foods.ts)
+**delete account** : [ef2](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/delete_account.ts)
+**create payment intent** : [ef3](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/create_payment_intent.ts)
+**stripe webhook** : [ef4](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/stripe_webhook.ts)
+**generate diet plan** : [ef5](https://github.com/mustafaAbdAlRazzak/gaia_nutrition_plans/blob/main/edge_functions/generate_diet_plan.ts)
+
 ## Contact / Author
 **Name:** Mostafa Abdel Razzak     
 **Email:** [mustafaabdalrazzak2002101@gmail.com](mailto:mustafaabdalrazzak2002101@gmail.com)
